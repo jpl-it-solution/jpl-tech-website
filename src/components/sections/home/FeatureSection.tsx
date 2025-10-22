@@ -3,6 +3,10 @@
 
 import Image from 'next/image';
 import React from 'react';
+import Divider from '@/components/ui/Divider';
+import {
+  CpuChipIcon,
+} from '@heroicons/react/24/outline'
 
 const FeatureSection = () => {
     return (
@@ -37,13 +41,7 @@ const FeatureSection = () => {
                 {/* Content container with z-index to appear above background images */}
                 <div className="relative z-10">
                     {/* Divider */}
-                    <div className="w-full px-4" data-aos="fade-up">
-                        <span className="flex items-center w-full">
-                            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300 dark:to-gray-600"></span>
-                            <span className="shrink-0 px-4 text-gray-900 dark:text-white uppercase">Features</span>
-                            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300 dark:to-gray-600"></span>
-                        </span>
-                    </div>
+                    <Divider text="Features" />
 
                     {/* Content */}
                     <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
@@ -76,9 +74,7 @@ const FeatureSection = () => {
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
                                             <div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 text-[#1B255E] dark:text-[#A6EFFB]">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
-                                                </svg>
+                                                <CpuChipIcon className="size-12 text-[#1B255E] dark:text-[#A6EFFB]" />
                                             </div>
                                         </div>
                                         <div className="flex-1 text-left">
@@ -95,9 +91,7 @@ const FeatureSection = () => {
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
                                             <div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 text-[#1B255E] dark:text-[#A6EFFB]">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
-                                                </svg>
+                                                <CpuChipIcon className="size-12 text-[#1B255E] dark:text-[#A6EFFB]" />
                                             </div>
                                         </div>
                                         <div className="flex-1 text-left">
@@ -114,9 +108,7 @@ const FeatureSection = () => {
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
                                             <div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-12 text-[#1B255E] dark:text-[#A6EFFB]">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
-                                                </svg>
+                                                <CpuChipIcon className="size-12 text-[#1B255E] dark:text-[#A6EFFB]" />
                                             </div>
                                         </div>
                                         <div className="flex-1 text-left">
