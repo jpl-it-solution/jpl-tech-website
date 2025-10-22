@@ -18,7 +18,7 @@ const Divider: React.FC<DividerProps> = ({
       <span className="flex items-center w-full">
         <span className={`h-px flex-1 bg-gradient-to-r from-transparent to-gray-300 dark:to-gray-600 ${lineClassName}`}></span>
         {text && (
-          <span className={`shrink-0 px-4 text-gray-900 dark:text-white uppercase ${textClassName}`}>
+          <span className={`shrink-0 px-4 text-white uppercase ${textClassName}`}>
             {text}
           </span>
         )}

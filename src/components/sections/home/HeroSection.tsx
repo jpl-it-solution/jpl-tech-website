@@ -9,7 +9,7 @@ import Link from 'next/link';
 const HeroSection = () => {
     return (
         <section className="relative  py-20 flex items-center overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+            <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start border-b-2 border-[#A6EFFB] gap-10 lg:gap-0">
                     {/* LEFT */}
                     <div className="w-full lg:w-2/3 text-center lg:text-left">

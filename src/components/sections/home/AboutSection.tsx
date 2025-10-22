@@ -36,7 +36,7 @@ const AboutSection = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+            <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
                 {/* Content container with z-index to appear above background images */}
                 <div className="relative z-10">
                     {/* Divider */}
@@ -45,8 +45,8 @@ const AboutSection = () => {
                     {/* Content */}
                     <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
                         <div data-aos="fade-down">
-                            <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none text-gray-900 xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl dark:text-white">We invest in the world's potential</h2>
-                            <p className="mb-8 px-16 font-extralight text-gray-500 sm:px-16 lg:px-48 dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                            <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl ">We invest in the world's potential</h2>
+                            <p className="mb-8 px-16 font-extralight  sm:px-16 lg:px-48 ">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
                         </div>
 
                         {/* Additional content area - ready for more content */}
@@ -61,8 +61,8 @@ const AboutSection = () => {
                                         height={64}
                                         className="mb-8"
                                     />
-                                    <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Automation</h1>
-                                    <p className="text-gray-600 dark:text-gray-300">
+                                    <h1 className="text-3xl font-bold mb-6 ">Automation</h1>
+                                    <p >
                                         Tincidunt nisi orci sodales non. Netus integer nunc mi nibh cursus vitae ut nulla lobortis. Risus duis bibendum.
                                     </p>
                                 </div>
@@ -78,8 +78,8 @@ const AboutSection = () => {
                                         height={64}
                                         className="mb-8"
                                     />
-                                    <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Precision</h1>
-                                    <p className="text-gray-600 dark:text-gray-300">
+                                    <h1 className="text-3xl font-bold mb-6 ">Precision</h1>
+                                    <p >
                                         Tincidunt nisi orci sodales non. Netus integer nunc mi nibh cursus vitae ut nulla lobortis. Risus duis bibendum.
                                     </p>
                                 </div>
@@ -95,8 +95,8 @@ const AboutSection = () => {
                                         height={64}
                                         className="mb-8"
                                     />
-                                    <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Accuracy</h1>
-                                    <p className="text-gray-600 dark:text-gray-300">
+                                    <h1 className="text-3xl font-bold mb-6 ">Accuracy</h1>
+                                    <p>
                                         Tincidunt nisi orci sodales non. Netus integer nunc mi nibh cursus vitae ut nulla lobortis. Risus duis bibendum.
                                     </p>
                                 </div>
@@ -112,7 +112,7 @@ const AboutSection = () => {
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="100"
                                 />
                             </div>
@@ -133,7 +133,7 @@ const AboutSection = () => {
                                     width={120}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="300"
                                 />
                             </div>
@@ -144,7 +144,7 @@ const AboutSection = () => {
                                     width={120}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="400"
                                 />
                             </div>
@@ -155,7 +155,7 @@ const AboutSection = () => {
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="500"
                                 />
                             </div>
@@ -166,7 +166,7 @@ const AboutSection = () => {
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="600"
                                 />
                             </div>
@@ -177,7 +177,7 @@ const AboutSection = () => {
                                     width={100}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="700"
                                 />
                             </div>
@@ -188,7 +188,7 @@ const AboutSection = () => {
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                    data-aos="zoom-in" 
+                                    data-aos="zoom-in"
                                     data-aos-delay="800"
                                 />
                             </div>

@@ -118,7 +118,7 @@ const ServicesSection = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+            <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
                 {/* Content container with z-index to appear above background images */}
                 <div className="relative z-10">
                     {/* Divider */}
@@ -127,10 +127,10 @@ const ServicesSection = () => {
                     {/* Content */}
                     <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
                         <div data-aos="fade-down">
-                            <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none text-gray-900 xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl dark:text-white">
+                            <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none  xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl ">
                                 Empowering Industries with Intelligent Automation Discover More
                             </h2>
-                            <p className="mb-8 px-16 font-extralight text-gray-500 sm:px-16 lg:px-48 dark:text-gray-400">
+                            <p className="mb-8 px-16 font-extralight  sm:px-16 lg:px-48 ">
                                 Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
                             </p>
                         </div>

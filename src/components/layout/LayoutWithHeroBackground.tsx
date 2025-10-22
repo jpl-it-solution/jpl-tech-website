@@ -11,7 +11,7 @@ interface LayoutProps {
 
 export default function LayoutWithHeroBackground({ children }: LayoutProps) {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       {/* Scrollable Background */}
       <div className="absolute z-0 h-[115vh] transform top-[0px] inset-x-0 scale-130">
         <Image

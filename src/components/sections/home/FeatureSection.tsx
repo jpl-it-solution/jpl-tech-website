@@ -37,7 +37,7 @@ const FeatureSection = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+            <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
                 {/* Content container with z-index to appear above background images */}
                 <div className="relative z-10">
                     {/* Divider */}
@@ -46,10 +46,10 @@ const FeatureSection = () => {
                     {/* Content */}
                     <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
                         <div data-aos="fade-down">
-                            <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none text-gray-900 xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl dark:text-white">
+                            <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl ">
                                 Empowering Industries with Intelligent Automation Discover More
                             </h2>
-                            <p className="mb-8 px-16 font-extralight text-gray-500 sm:px-16 lg:px-48 dark:text-gray-400">
+                            <p className="mb-8 px-16 font-extralight  sm:px-16 lg:px-48 ">
                                 Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
                             </p>
                         </div>
@@ -74,14 +74,14 @@ const FeatureSection = () => {
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
                                             <div>
-                                                <CpuChipIcon className="size-12 text-[#1B255E] dark:text-[#A6EFFB]" />
+                                                <CpuChipIcon className="size-12 text-[#A6EFFB]" />
                                             </div>
                                         </div>
                                         <div className="flex-1 text-left">
-                                            <h3 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h3 className="mb-3 text-2xl font-bold tracking-tight ">
                                                 Machine Learning
                                             </h3>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                            <p className="text-sm  leading-relaxed">
                                                 Integer nunc mi nibh cursus vitae ut nulla lobortis. Risus duis bibendum.
                                             </p>
                                         </div>
@@ -91,14 +91,14 @@ const FeatureSection = () => {
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
                                             <div>
-                                                <CpuChipIcon className="size-12 text-[#1B255E] dark:text-[#A6EFFB]" />
+                                                <CpuChipIcon className="size-12 text-[#A6EFFB]" />
                                             </div>
                                         </div>
                                         <div className="flex-1 text-left">
-                                            <h3 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h3 className="mb-3 text-2xl font-bold tracking-tight ">
                                                 Sensor Integration
                                             </h3>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                            <p className="text-sm  leading-relaxed">
                                                 Integer nunc mi nibh cursus vitae ut nulla lobortis. Risus duis bibendum.
                                             </p>
                                         </div>
@@ -108,14 +108,14 @@ const FeatureSection = () => {
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
                                             <div>
-                                                <CpuChipIcon className="size-12 text-[#1B255E] dark:text-[#A6EFFB]" />
+                                                <CpuChipIcon className="size-12 text-[#A6EFFB]" />
                                             </div>
                                         </div>
                                         <div className="flex-1 text-left">
-                                            <h3 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h3 className="mb-3 text-2xl font-bold tracking-tight ">
                                                 Computer Vision
                                             </h3>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                            <p className="text-sm  leading-relaxed">
                                                 Integer nunc mi nibh cursus vitae ut nulla lobortis. Risus duis bibendum.
                                             </p>
                                         </div>
