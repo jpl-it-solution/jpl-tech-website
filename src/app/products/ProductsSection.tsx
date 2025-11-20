@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Divider from '@/components/ui/Divider';
 import React from 'react';
+import Link from 'next/dist/client/link';
 
 const ProductsSection = () => {
   return (
@@ -35,6 +36,7 @@ const ProductsSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Card 1 - Software Products */}
+            <Link href="/products/software">
             <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
               <Image
                 src="/images/Icon-6.png"
@@ -46,8 +48,10 @@ const ProductsSection = () => {
               <h3 className="text-2xl font-semibold mb-3 text-white">Software Products</h3>
               <p className="text-gray-400">Ready-to-use software solutions for every business need.</p>
             </div>
+            </Link>
 
             {/* Card 2 - AI Tools */}
+            <Link href="/products/ai-tools">
             <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
               <Image
                 src="/images/Icon-7.png"
@@ -59,8 +63,10 @@ const ProductsSection = () => {
               <h3 className="text-2xl font-semibold mb-3 text-white">AI Tools</h3>
               <p className="text-gray-400">Artificial intelligence products built to revolutionize workflows.</p>
             </div>
+            </Link>
 
             {/* Card 3 - Analytics Suite */}
+            <Link href="/products/analytics">
             <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
               <Image
                 src="/images/Icon-8.png"
@@ -72,8 +78,10 @@ const ProductsSection = () => {
               <h3 className="text-2xl font-semibold mb-3 text-white">Analytics Suite</h3>
               <p className="text-gray-400">Gain deep insights from data to make smarter decisions.</p>
             </div>
+            </Link>
 
             {/* Card 4 - Security Solutions */}
+            <Link href="/products/security">
             <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
               <Image
                 src="/images/Icon-9.png"
@@ -85,6 +93,7 @@ const ProductsSection = () => {
               <h3 className="text-2xl font-semibold mb-3 text-white">Security Solutions</h3>
               <p className="text-gray-400">Advanced cybersecurity systems to protect your digital assets.</p>
             </div>
+            </Link>
           </div>
         </div>
       </div>

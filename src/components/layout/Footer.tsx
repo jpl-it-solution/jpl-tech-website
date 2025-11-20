@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const Footer: React.FC = () => {
@@ -56,10 +57,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-4 text-lg">Company</h4>
             <ul className="space-y-2 text-[15px]">
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">About</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Services</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Features</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Pricing</a></li>
+              <li><Link href="/about-us" className="hover:text-[#A6EFFB] transition">About</Link></li>
+              <li><Link href="/services" className="hover:text-[#A6EFFB] transition">Services</Link></li>
+              <li><Link href="/features" className="hover:text-[#A6EFFB] transition">Features</Link></li>
+              <li><Link href="/pricing" className="hover:text-[#A6EFFB] transition">Pricing</Link></li>
             </ul>
           </div>
 
@@ -117,3 +118,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

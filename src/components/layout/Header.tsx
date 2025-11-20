@@ -381,16 +381,24 @@ export default function Header() {
           <Popover className="relative">
             {({ open, close }) => (
               <>
-                <PopoverButton className="flex items-center font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
-                  Services
-                  <ChevronDownIcon className={`ml-1 size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-                </PopoverButton>
+                <div className="flex items-center">
+                  <Link
+                    href="/services"
+                    className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5] transition-colors"
+                    onClick={close}
+                  >
+                    Services
+                  </Link>
+                  <PopoverButton className="flex items-center ml-1 font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
+                    <ChevronDownIcon className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
+                  </PopoverButton>
+                </div>
 
                 {/* TRANSPARENT DROPDOWN */}
                 <PopoverPanel
                   className="
                     absolute left-1/2 z-50 mt-3 w-screen max-w-md -translate-x-1/2
-                    overflow-hidden rounded-3xl 
+                    overflow-hidden rounded-3xl
                     bg-gray-800/20 backdrop-blur-lg
                     outline outline-1 outline-white/10
                   "
@@ -422,16 +430,24 @@ export default function Header() {
           <Popover className="relative">
             {({ open, close }) => (
               <>
-                <PopoverButton className="flex items-center font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
-                  Products
-                  <ChevronDownIcon className={`ml-1 size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-                </PopoverButton>
+                <div className="flex items-center">
+                  <Link
+                    href="/products"
+                    className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5] transition-colors"
+                    onClick={close}
+                  >
+                    Products
+                  </Link>
+                  <PopoverButton className="flex items-center ml-1 font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
+                    <ChevronDownIcon className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
+                  </PopoverButton>
+                </div>
 
                 {/* TRANSPARENT DROPDOWN */}
                 <PopoverPanel
                   className="
                     absolute left-1/2 z-50 mt-3 w-screen max-w-md -translate-x-1/2
-                    overflow-hidden rounded-3xl 
+                    overflow-hidden rounded-3xl
                     bg-gray-800/20 backdrop-blur-lg
                     outline outline-1 outline-white/10
                   "
