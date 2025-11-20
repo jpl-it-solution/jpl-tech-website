@@ -1,114 +1,115 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-gray-900 text-white py-12">
-      {/* Decorative top divider */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-        <svg
-          className="relative block w-full h-8 text-gray-900"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          viewBox="0 0 1200 120"
-        >
-          <path
-            d="M321.39,56.44c58.56,12.73,117.12,25.47,175.68,20.77,58.56-4.7,117.12-28.84,175.68-39.09C731.21,28.87,789.77,31.29,848.33,43.6c58.56,12.31,117.12,34.52,175.68,37.57,58.56,3.05,117.12-13.16,175.68-26.69V0H0V27.35C58.56,40.89,117.12,43.71,175.68,48.41,234.24,53.11,292.8,43.71,321.39,56.44Z"
-            fill="currentColor"
-          ></path>
-        </svg>
+    <footer className="relative overflow-hidden bg-[#0E0F19] text-gray-300 py-20">
+      {/* Background Ellipses (same as Feature Section) */}
+      <div className="absolute right-0 top-0 h-full w-full flex flex-col items-end justify-center opacity-70">
+        <div>
+          <Image
+            src="/images/Ellipse-1.png"
+            alt="Background Ellipse 1"
+            width={500}
+            height={500}
+            className="w-auto h-auto max-h-[70vh] object-contain"
+            priority
+          />
+        </div>
+        <div>
+          <Image
+            src="/images/Ellipse-4.png"
+            alt="Background Ellipse 4"
+            width={400}
+            height={400}
+            className="w-auto h-auto max-h-[70vh] object-contain"
+            priority
+          />
+        </div>
       </div>
 
-      {/* Main content */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-3 mb-4">
+      {/* Main Container */}
+      <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+          
+          {/* Logo + Description */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
               <Image
-                src="/logo.svg" // Change to your logo path
-                alt="JPL Tech Logo"
-                width={40}
-                height={40}
+                src="/images/logo.png"
+                alt="Robotiko Logo"
+                width={160}
+                height={50}
+                className="object-contain"
               />
-              <h2 className="text-2xl font-bold text-white">JPL Tech</h2>
             </div>
-            <p className="text-gray-400 text-sm leading-6">
-              JPL Tech Private Limited is a digital innovation company providing
-              creative solutions in software development, design, and
-              technology. We build future-ready digital experiences.
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+              Innovating intelligent automation and smart solutions for modern
+              industries.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">
-              Quick Links
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-white">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-400 hover:text-white">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-400 hover:text-white">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white">
-                  Contact Us
-                </Link>
-              </li>
+            <h4 className="text-white font-semibold mb-4 text-lg">Company</h4>
+            <ul className="space-y-2 text-[15px]">
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">About</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Services</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Features</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Pricing</a></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Resources Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
-            <ul className="space-y-3 text-gray-400">
-              <li>Email: <span className="text-white">info@jplitsolution.com</span></li>
-              <li>Phone: <span className="text-white">+91 98765 43210</span></li>
-              <li>Location: <span className="text-white">Remote / India</span></li>
+            <h4 className="text-white font-semibold mb-4 text-lg">Resources</h4>
+            <ul className="space-y-2 text-[15px]">
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Case Studies</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Webinars</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Developer</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Documentation</a></li>
             </ul>
+          </div>
 
-            {/* Social Icons */}
-            <div className="flex space-x-5 mt-5">
-              <Link href="https://www.linkedin.com" target="_blank">
-                <i className="fab fa-linkedin text-xl hover:text-blue-400"></i>
-              </Link>
-              <Link href="https://www.instagram.com" target="_blank">
-                <i className="fab fa-instagram text-xl hover:text-pink-400"></i>
-              </Link>
-              <Link href="https://www.facebook.com" target="_blank">
-                <i className="fab fa-facebook text-xl hover:text-blue-500"></i>
-              </Link>
-              <Link href="https://www.twitter.com" target="_blank">
-                <i className="fab fa-twitter text-xl hover:text-sky-400"></i>
-              </Link>
-            </div>
+          {/* Help Column */}
+          <div>
+            <h4 className="text-white font-semibold mb-4 text-lg">Help</h4>
+            <ul className="space-y-2 text-[15px]">
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Customer Support</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Delivery Details</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Terms & Conditions</a></li>
+              <li><a href="#" className="hover:text-[#A6EFFB] transition">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          {/* Newsletter Section */}
+          <div>
+            <h4 className="text-white font-semibold mb-5 text-lg">
+              Subscribe To Newsletter
+            </h4>
+            <form className="flex items-center bg-white rounded-full shadow-md max-w-md p-1">
+              <input
+                type="email"
+                placeholder="Enter Email Address"
+                className="flex-grow px-4 py-3 text-sm text-gray-700 focus:outline-none rounded-full"
+              />
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-indigo-400 to-blue-500 text-white text-sm font-semibold px-6 py-3 rounded-full hover:from-purple-400 hover:to-indigo-500 transition-all duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
 
-        {/* Bottom Line */}
-        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
-          <p>
-            © {new Date().getFullYear()} JPL Tech Private Limited. All Rights Reserved.
-          </p>
+        {/* Bottom Divider */}
+        <div className="border-t border-[#1F2230] pt-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-400">
+          <p>Copyright © 2025 Robotiko</p>
+          <p className="mt-2 sm:mt-0">Designed by TokoTema</p>
         </div>
       </div>
     </footer>

@@ -8,59 +8,40 @@ import Divider from '@/components/ui/Divider';
 
 const serviceList = [
     {
-        image: '/images/Icon-1.png',
-        title: "Product Design",
+        image: '/images/Icon-6.png',
+        title: "Automation",
         description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
+             "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",    },
     {
-        image: '/images/Icon-2.png',
-        title: "Photography",
+        image: '/images/Icon-5.png',
+        title: "Construction",
         description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",   },
+    {
+        image: '/images/Icon-4.png',
+        title: "Manufacturing",
+        description:
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",
     },
     {
         image: '/images/Icon-3.png',
-        title: "Coding",
+        title: "Public Safety",
         description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."},
     {
-        image: '/images/Icon-4.png',
-        title: "Content Writing",
+        image: '/images/Icon-2.png',
+        title: "Power & Utilities",
         description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."  },
     {
-        image: '/images/Icon-5.png',
-        title: "Branding",
+        image: '/images/Icon-1.png',
+        title: "Management",
         description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
-    {
-        image: '/images/Icon-6.png',
-        title: "Data Entry",
-        description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
-        {
-        image: '/images/Icon-7.png',
-        title: "Content Writing",
-        description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
-    {
-        image: '/images/Icon-7.png',
-        title: "Branding",
-        description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
-    {
-        image: '/images/Icon-9.png',
-        title: "Data Entry",
-        description:
-            "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui.",
-    },
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."
+
+},
+    
+   
 ];
 
 type Service = {
@@ -70,23 +51,33 @@ type Service = {
 };
 
 const ServiceItem = ({ service }: { service: Service }) => (
-    <div className="bg-[#151721] hover:bg-[#1B255E] p-4 md:p-12 h-full transition-all duration-300 delay-150 ease-in-out">
-        <div className={`flex items-center w-20 h-20 bg-white shadow-xl dark:bg-slate-800 rounded-full justify-center p-5 text-3xl`}>
-            <Image
-                src={service.image}
-                alt={service.title}
-                width={64}
-                height={64}
-                className="object-contain"
-            />
-        
+    <div className="flex flex-col justify-between bg-[#151721] hover:bg-[#1B255E] p-4 md:p-8 h-full transition-all duration-300 delay-150 ease-in-out">
+        {/* fixed-size header (prevents image / title pushing layout) */}
+        <div className="flex-none">
+            <div className="w-16 h-16 flex items-center justify-center">
+                <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                />
+            </div>
         </div>
-        <div className="mt-4">
-            <h5 className="text-2xl font-medium mb-3">{service.title}</h5>
-            <p className="opacity-80 mb-0">{service.description}</p>
+
+        {/* flexible middle content */}
+        <div className="mt-6 flex-1">
+            <h5 className="text-3xl font-bold mb-5 text-left">{service.title}</h5>
+            <p className="opacity-80 mb-0 text-left">{service.description}</p>
+        </div>
+
+        {/* footer/link pinned to bottom */}
+        <div className="mt-6 text-left flex-none">
+           <a className="inline-block text-sm font-semibold uppercase tracking-wide text-indigo-400" href="#">Learn More</a>
         </div>
     </div>
 );
+
 
 const ServicesSection = () => {
     return (
@@ -136,13 +127,15 @@ const ServicesSection = () => {
                         </div>
 
                         {/* Additional content or service listings can be added here */}
-                        <div className="w-full flex flex-wrap">
+                       {/* Additional content or service listings can be added here */}
+                        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                             {serviceList.map((service, i) => (
-                                <div className="w-full md:w-1/2 lg:w-1/3 mt-4 px-2 h-full" key={i}>
-                                    <ServiceItem service={service} />
-                                </div>
-                            ))}
+                           <div className="h-full px-2 mt-4" key={i}>
+                            <ServiceItem service={service} />
+                            </div>
+                              ))}
                         </div>
+
                     </div>
                 </div>
             </div>
