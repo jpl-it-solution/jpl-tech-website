@@ -65,7 +65,7 @@ const TestimonialSection = () => {
         <Divider text="Testimonials" />
 
         {/* Title */}
-        <div className="text-center mb-16" data-aos="fade-down">
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Trusted by{' '}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -81,8 +81,6 @@ const TestimonialSection = () => {
             <div
               key={index}
               className="bg-[#151721] p-8 rounded-xl shadow-lg border border-[#1F2230] hover:border-[#7B8CE5]/60 transition-all duration-300"
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
             >
               {/* Star Rating */}
               <div className="flex gap-1 mb-4 text-[#00C8FF]">

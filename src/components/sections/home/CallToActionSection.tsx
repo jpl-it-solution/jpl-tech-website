@@ -35,7 +35,7 @@ const CallToActionSection = () => {
       <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 text-center relative z-10 py-24">
         <Divider text="Call To Action" />
 
-        <div data-aos="fade-up" className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
             Take the{' '}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">

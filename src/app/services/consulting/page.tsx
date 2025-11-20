@@ -36,7 +36,7 @@ const ConsultingPage = () => {
         <Divider text="Consulting Services" />
 
         <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
-          <div data-aos="fade-down">
+          <div>
             <h2 className="mb-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Transform Your Business with Expert Consulting
             </h2>

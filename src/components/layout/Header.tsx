@@ -289,17 +289,10 @@
 //   );
 // }
 
-
-
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Popover,
   PopoverButton,
   PopoverGroup,
@@ -312,7 +305,6 @@ import {
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
-  XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
@@ -338,13 +330,13 @@ const productsItems = [
 ];
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      // Scroll handler could be implemented here if needed
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -360,22 +352,40 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - simplified for now */}
         <div className="flex lg:hidden">
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white hover:text-[#7B8CE5]"
           >
+            <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
 
         {/* Desktop Navigation */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-8">
-          <Link href="/" className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">Home</Link>
+          <Link
+            href="/"
+            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
+              pathname === '/'
+                ? 'text-[#7B8CE5]'
+                : 'text-white hover:text-[#7B8CE5]'
+            }`}
+          >
+            Home
+          </Link>
 
-          <Link href="/about-us" className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">About Us</Link>
+          <Link
+            href="/about-us"
+            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
+              pathname === '/about-us'
+                ? 'text-[#7B8CE5]'
+                : 'text-white hover:text-[#7B8CE5]'
+            }`}
+          >
+            About Us
+          </Link>
 
           {/* Services Dropdown */}
           <Popover className="relative">
@@ -384,12 +394,20 @@ export default function Header() {
                 <div className="flex items-center">
                   <Link
                     href="/services"
-                    className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5] transition-colors"
+                    className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
+                      pathname.startsWith('/services')
+                        ? 'text-[#7B8CE5]'
+                        : 'text-white hover:text-[#7B8CE5]'
+                    }`}
                     onClick={close}
                   >
                     Services
                   </Link>
-                  <PopoverButton className="flex items-center ml-1 font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
+                  <PopoverButton className={`flex items-center ml-1 font-dm-sans text-[0.875em] font-bold transition-colors ${
+                    pathname.startsWith('/services')
+                      ? 'text-[#7B8CE5]'
+                      : 'text-white hover:text-[#7B8CE5]'
+                  }`}>
                     <ChevronDownIcon className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
                   </PopoverButton>
                 </div>
@@ -433,12 +451,20 @@ export default function Header() {
                 <div className="flex items-center">
                   <Link
                     href="/products"
-                    className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5] transition-colors"
+                    className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
+                      pathname.startsWith('/products')
+                        ? 'text-[#7B8CE5]'
+                        : 'text-white hover:text-[#7B8CE5]'
+                    }`}
                     onClick={close}
                   >
                     Products
                   </Link>
-                  <PopoverButton className="flex items-center ml-1 font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
+                  <PopoverButton className={`flex items-center ml-1 font-dm-sans text-[0.875em] font-bold transition-colors ${
+                    pathname.startsWith('/products')
+                      ? 'text-[#7B8CE5]'
+                      : 'text-white hover:text-[#7B8CE5]'
+                  }`}>
                     <ChevronDownIcon className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
                   </PopoverButton>
                 </div>
@@ -475,7 +501,14 @@ export default function Header() {
             )}
           </Popover>
 
-          <Link href="/careers" className="font-dm-sans text-[0.875em] font-bold text-white hover:text-[#7B8CE5]">
+          <Link
+            href="/careers"
+            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
+              pathname === '/careers'
+                ? 'text-[#7B8CE5]'
+                : 'text-white hover:text-[#7B8CE5]'
+            }`}
+          >
             Career
           </Link>
         </PopoverGroup>

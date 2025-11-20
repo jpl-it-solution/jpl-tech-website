@@ -45,7 +45,7 @@ const FeatureSection = () => {
 
                     {/* Content */}
                     <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
-                        <div data-aos="fade-down">
+                        <div>
                             <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl ">
                                 Empowering Industries with Intelligent Automation Discover More
                             </h2>
@@ -58,8 +58,8 @@ const FeatureSection = () => {
                         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                                 {/* Image Section */}
-                                <div className="flex-[2] min-w-0" data-aos="fade-right">
-                                    <img
+                                <div className="flex-[2] min-w-0">
+                                    <Image
                                         src="/images/white-robot-cyborg-hand-pressing-a-keyboard-on-a-l-2021-12-09-15-29-51-utc-1.jpg"
                                         className="w-full h-auto shadow-lg"
                                         width={650}
@@ -69,7 +69,7 @@ const FeatureSection = () => {
                                 </div>
 
                                 {/* Content Section */}
-                                <div className="flex-1 min-w-0 space-y-8" data-aos="fade-left">
+                                <div className="flex-1 min-w-0 space-y-8">
                                     {/* Machine Learning */}
                                     <div className="flex gap-6 items-start">
                                         <div className="flex-shrink-0">
@@ -127,28 +127,28 @@ const FeatureSection = () => {
                         {/* Status card */}
                         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                             <div className="py-16 px-6 shadow-lg bg-[#151721] transform flex items-center flex-col justify-center min-h-[200px]"
-                                data-aos="fade-up" data-aos-delay="100">
+                               >
                                 <h1 className="text-5xl font-bold mb-4 text-white">64K +</h1>
                                 <p className="text-gray-300">
                                     Success Projects
                                 </p>
                             </div>
                             <div className="py-16 px-6 shadow-lg bg-[#7B8CE5] transform flex items-center flex-col justify-center min-h-[200px]"
-                                data-aos="zoom-in" data-aos-delay="200">
+                               >
                                 <h1 className="text-5xl font-bold mb-4 text-white">54 +</h1>
                                 <p className="text-gray-300">
                                     Expert Team
                                 </p>
                             </div>
                             <div className="py-16 px-6 shadow-lg bg-[#151721] transform flex items-center flex-col justify-center min-h-[200px]"
-                                data-aos="fade-up" data-aos-delay="300">
+                               >
                                 <h1 className="text-5xl font-bold mb-4 text-white">36K +</h1>
                                 <p className="text-gray-300">
                                     Satisfied Clients
                                 </p>
                             </div>
                             <div className="py-16 px-6 shadow-lg bg-[#151721] transform flex items-center flex-col justify-center min-h-[200px]"
-                                data-aos="fade-up" data-aos-delay="400">
+                               >
                                 <h1 className="text-5xl font-bold mb-4 text-white">25 +</h1>
                                 <p className="text-gray-300">
                                     Awards Winning

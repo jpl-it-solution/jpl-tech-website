@@ -37,7 +37,7 @@ const ProductsSection = () => {
             
             {/* Card 1 - Software Products */}
             <Link href="/products/software">
-            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
+            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors">
               <Image
                 src="/images/Icon-6.png"
                 alt="Software Products"
@@ -52,7 +52,7 @@ const ProductsSection = () => {
 
             {/* Card 2 - AI Tools */}
             <Link href="/products/ai-tools">
-            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
+            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors">
               <Image
                 src="/images/Icon-7.png"
                 alt="AI Tools"
@@ -67,7 +67,7 @@ const ProductsSection = () => {
 
             {/* Card 3 - Analytics Suite */}
             <Link href="/products/analytics">
-            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
+            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors">
               <Image
                 src="/images/Icon-8.png"
                 alt="Analytics Suite"
@@ -82,7 +82,7 @@ const ProductsSection = () => {
 
             {/* Card 4 - Security Solutions */}
             <Link href="/products/security">
-            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl">
+            <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors ">
               <Image
                 src="/images/Icon-9.png"
                 alt="Security Solutions"

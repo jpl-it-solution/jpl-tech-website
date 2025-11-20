@@ -117,7 +117,7 @@ const ServicesSection = () => {
 
                     {/* Content */}
                     <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
-                        <div data-aos="fade-down">
+                        <div>
                             <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none  xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl ">
                                 Empowering Industries with Intelligent Automation Discover More
                             </h2>

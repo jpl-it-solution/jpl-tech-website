@@ -41,7 +41,7 @@ const WhyChooseUsSection = () => {
 
           {/* Content */}
           <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
-            <div data-aos="fade-down">
+            <div>
               <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl">
                 Why Our Clients Trust Us
               </h2>
@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
               <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
                 
                 {/* Text Section (Left) */}
-                <div className="flex-1 min-w-0 space-y-8 text-left" data-aos="fade-right">
+                <div className="flex-1 min-w-0 space-y-8 text-left">
                   {/* Expertise */}
                   <div className="flex gap-6 items-start">
                     <div className="flex-shrink-0">
@@ -103,7 +103,7 @@ const WhyChooseUsSection = () => {
                 </div>
 
                 {/* Image Section (Right) */}
-                <div className="flex-[1.5] relative w-full self-start" data-aos="fade-left">
+                <div className="flex-[1.5] relative w-full self-start">
                   <Image
                     src="/images/image.jpg"
                     alt="why choose us"

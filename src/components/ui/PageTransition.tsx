@@ -13,7 +13,22 @@ export default function PageTransition({ onAnimationComplete }: PageTransitionPr
   const pathname = usePathname();
 
   useEffect(() => {
-    // Show transition when route changes
+    // Skip transition for home page
+    if (pathname === '/') {
+      setIsLoading(false);
+      setDisplayPath(pathname);
+      
+      // Ensure content is visible for home page
+      const contentWrapper = document.getElementById('content-wrapper');
+      if (contentWrapper) {
+        contentWrapper.style.display = 'block';
+        contentWrapper.style.opacity = '1';
+      }
+      
+      return;
+    }
+
+    // Show transition when route changes (for non-home pages)
     setIsLoading(true);
     setDisplayPath(pathname);
 

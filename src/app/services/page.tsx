@@ -1,17 +1,3 @@
-// app/services/page.tsx
-// export default function ServicesPage() {
-//     return (
-//       <div className="min-h-screen pt-20">
-//         <div className="container mx-auto px-4 py-8">
-//           <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
-//           <p className="text-gray-300 text-lg">Explore our comprehensive range of services.</p>
-//         </div>
-//       </div>
-//     );
-//   }
-
-
-
 'use client';
 
 import Image from 'next/image';
@@ -21,65 +7,123 @@ import Link from 'next/link';
 
 const ServicesPage = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0E0F19] text-gray-300 py-20">
+    <section className="relative overflow-hidden my-16">
       {/* Background */}
-      <div className="absolute left-0 top-0 h-full w-full flex flex-col items-start justify-center opacity-70">
+      <div className="absolute left-0 top-0 h-full w-full flex flex-col items-start justify-center opacity-30">
         <Image
           src="/images/Ellipse-2.png"
           alt="Background Ellipse"
           width={500}
           height={500}
           className="w-auto h-auto max-h-[70vh] object-contain"
+          priority
         />
       </div>
 
-      {/* Content */}
-      <div className="container relative z-10 px-6 mx-auto max-w-7xl md:px-12 lg:px-24">
+      {/* Foreground Content */}
+      <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
         <Divider text="Our Services" />
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-white">
-          Explore Our Expertise
-        </h2>
+        <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight leading-none sm:text-4xl md:text-5xl text-white">
+            Comprehensive Tech Solutions for Your Business
+          </h2>
+          <p className="mb-12 text-gray-300 max-w-3xl mx-auto">
+            From custom software to AI-powered solutions, we deliver services that drive innovation and growth.
+          </p>
 
-        <div className="grid md:grid-cols-2 gap-8 text-left">
-          {/* Service Categories */}
-          <div>
-            <h3 className="text-xl font-semibold text-indigo-400 mb-2">Software Development</h3>
-            <ul className="space-y-2">
-              <li><Link href="/services/web-development" className="hover:text-indigo-300">Custom Software Development</Link></li>
-              <li><Link href="/services/web-development">Enterprise Application Development</Link></li>
-              <li><Link href="/services/web-development">SaaS Solutions</Link></li>
-              <li><Link href="/services/web-development">API Development & Integration</Link></li>
-            </ul>
-          </div>
+          {/* Service Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            {/* Card 1 - Web Development */}
+            <Link href="/services/web-development" className="h-full">
+            <div className="h-full p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors flex flex-col">
+              <Image
+                src="/images/Icon-1.png"
+                alt="Web Development"
+                width={64}
+                height={64}
+                className="mx-auto mb-6"
+              />
+              <h3 className="text-2xl font-semibold mb-3 text-white">Web Development</h3>
+              <p className="text-gray-400 flex-grow">Build responsive, scalable websites and web applications tailored to your needs.</p>
+            </div>
+            </Link>
 
-          <div>
-            <h3 className="text-xl font-semibold text-indigo-400 mb-2">Web Development</h3>
-            <ul className="space-y-2">
-              <li><Link href="/services/web-development">Corporate Websites</Link></li>
-              <li><Link href="/services/web-development">Web Applications</Link></li>
-              <li><Link href="/services/web-development">Progressive Web Apps</Link></li>
-              <li><Link href="/services/web-development">E-Commerce Platforms</Link></li>
-            </ul>
-          </div>
+            {/* Card 2 - Mobile Apps */}
+            <Link href="/services/mobile-apps" className="h-full">
+            <div className="h-full p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors flex flex-col">
+              <Image
+                src="/images/Icon-2.png"
+                alt="Mobile App Development"
+                width={64}
+                height={64}
+                className="mx-auto mb-6"
+              />
+              <h3 className="text-2xl font-semibold mb-3 text-white">Mobile App Development</h3>
+              <p className="text-gray-400 flex-grow">Create powerful iOS and Android apps that engage users and drive results.</p>
+            </div>
+            </Link>
 
-          <div>
-            <h3 className="text-xl font-semibold text-indigo-400 mb-2">Mobile App Development</h3>
-            <ul className="space-y-2">
-              <li><Link href="/services/mobile-apps">Android & iOS Apps</Link></li>
-              <li><Link href="/services/mobile-apps">Cross-platform Apps</Link></li>
-              <li><Link href="/services/mobile-apps">On-demand Apps</Link></li>
-            </ul>
-          </div>
+            {/* Card 3 - AI & ML */}
+            <Link href="/services/ai-ml" className="h-full">
+            <div className="h-full p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors flex flex-col">
+              <Image
+                src="/images/Icon-3.png"
+                alt="AI & Machine Learning"
+                width={64}
+                height={64}
+                className="mx-auto mb-6"
+              />
+              <h3 className="text-2xl font-semibold mb-3 text-white">AI & Machine Learning</h3>
+              <p className="text-gray-400 flex-grow">Leverage intelligent automation and predictive analytics to transform your business.</p>
+            </div>
+            </Link>
 
-          <div>
-            <h3 className="text-xl font-semibold text-indigo-400 mb-2">AI, ML & Data Science</h3>
-            <ul className="space-y-2">
-              <li><Link href="/services/ai-ml">AI Solutions</Link></li>
-              <li><Link href="/services/ai-ml">Machine Learning Models</Link></li>
-              <li><Link href="/services/ai-ml">NLP & Chatbots</Link></li>
-              <li><Link href="/services/ai-ml">Computer Vision</Link></li>
-            </ul>
+            {/* Card 4 - Cloud Services */}
+            <Link href="/services/cloud-services" className="h-full">
+            <div className="h-full p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors flex flex-col">
+              <Image
+                src="/images/Icon-4.png"
+                alt="Cloud Services"
+                width={64}
+                height={64}
+                className="mx-auto mb-6"
+              />
+              <h3 className="text-2xl font-semibold mb-3 text-white">Cloud Services</h3>
+              <p className="text-gray-400 flex-grow">Migrate, manage, and optimize your infrastructure with secure cloud solutions.</p>
+            </div>
+            </Link>
+
+            {/* Card 5 - Consulting */}
+            <Link href="/services/consulting" className="h-full">
+            <div className="h-full p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors flex flex-col">
+              <Image
+                src="/images/Icon-5.png"
+                alt="IT Consulting"
+                width={64}
+                height={64}
+                className="mx-auto mb-6"
+              />
+              <h3 className="text-2xl font-semibold mb-3 text-white">IT Consulting</h3>
+              <p className="text-gray-400 flex-grow">Strategic technology guidance to align your IT investments with business goals.</p>
+            </div>
+            </Link>
+
+            {/* Card 6 - Custom Software */}
+            <Link href="/services/web-development" className="h-full">
+            <div className="h-full p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:border-indigo-500 transition-colors flex flex-col">
+              <Image
+                src="/images/Icon-6.png"
+                alt="Custom Software"
+                width={64}
+                height={64}
+                className="mx-auto mb-6"
+              />
+              <h3 className="text-2xl font-semibold mb-3 text-white">Custom Software</h3>
+              <p className="text-gray-400 flex-grow">Bespoke software solutions designed to solve your unique business challenges.</p>
+            </div>
+            </Link>
           </div>
         </div>
       </div>

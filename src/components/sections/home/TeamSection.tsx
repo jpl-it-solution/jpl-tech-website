@@ -59,7 +59,7 @@ const TeamSection = () => {
       <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
         <Divider text="Our Team" />
 
-        <div className="text-center mb-16" data-aos="fade-down">
+        <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Meet Our{' '}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -77,8 +77,6 @@ const TeamSection = () => {
             <div
               key={index}
               className="bg-[#151721] rounded-xl overflow-hidden shadow-lg group transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              data-aos="fade-up"
-              data-aos-delay={index * 150}
             >
               <div className="relative">
                 <Image
