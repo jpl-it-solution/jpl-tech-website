@@ -17,7 +17,7 @@ export default function Home() {
       <AboutSection />
       <FeatureSection />
       <ServicesSection />
-      {/* A Contact Us form section could also be included here */}
+      {/* A Contact Us form section could also be included here ji */}
        <WhyChooseUsSection/>
        <TestimonialSection/>
        {/* <TeamSection/> */}
