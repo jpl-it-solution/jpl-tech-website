@@ -21,7 +21,7 @@ const CallToActionSection = () => {
         </div>
         <div className="">
           <Image
-            src="/images/Ellipse-4.png"
+            src="/images/Ellipse_4.png"
             alt="Background Ellipse 4"
             width={400}
             height={400}
