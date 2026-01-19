@@ -29,9 +29,9 @@ export default function RootLayout({
       <body suppressHydrationWarning className="font-sans">
         {/* Page Transition Component */}
         <PageTransition />
-        
-        {/* Content Wrapper with Suspense - Initially Hidden */}
-        <div id="content-wrapper" style={{ display: 'none', opacity: '0' }}>
+
+        {/* Content Wrapper turned visible by default to avoid black screen race condition */}
+        <div id="content-wrapper" suppressHydrationWarning>
           <Header />
           <main>
             <AOSInitializer />
@@ -41,29 +41,6 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
-        
-        {/* Initial loading state */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Initially hide content on page load
-              document.addEventListener('DOMContentLoaded', function() {
-                const contentWrapper = document.getElementById('content-wrapper');
-                if (contentWrapper) {
-                  contentWrapper.style.display = 'none';
-                }
-              });
-              
-              // Handle browser back/forward navigation
-              window.addEventListener('pageshow', function(event) {
-                const contentWrapper = document.getElementById('content-wrapper');
-                if (contentWrapper) {
-                  contentWrapper.style.display = 'none';
-                }
-              });
-            `,
-          }}
-        />
       </body>
     </html>
   );

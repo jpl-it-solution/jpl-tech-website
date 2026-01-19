@@ -41,8 +41,8 @@ const ConsultingPage = () => {
               Transform Your Business with Expert Consulting
             </h2>
             <p className="mb-8 px-6 sm:px-16 lg:px-48 text-gray-300 font-extralight">
-              Our Consulting Services help businesses identify opportunities, overcome challenges, 
-              and implement strategic solutions powered by technology and innovation. 
+              Our Consulting Services help businesses identify opportunities, overcome challenges,
+              and implement strategic solutions powered by technology and innovation.
               We focus on delivering actionable insights, process optimization, and scalable growth solutions.
             </p>
           </div>

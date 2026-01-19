@@ -35,12 +35,12 @@ const Footer: React.FC = () => {
       <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-          
+
           {/* Logo + Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo/jpl-logo.png"
                 alt="Robotiko Logo"
                 width={160}
                 height={50}

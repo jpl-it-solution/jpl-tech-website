@@ -45,7 +45,7 @@ const ContactUsPage = () => {
             Get in Touch With Us
           </h2>
           <p className="mb-12 text-gray-300 max-w-3xl mx-auto">
-            Have questions, partnership ideas, or want to work with us?  
+            Have questions, partnership ideas, or want to work with us?
             We’d love to hear from you. Reach out using the form below or through our contact details.
           </p>
 

@@ -46,7 +46,7 @@ const CallToActionSection = () => {
           </h2>
 
           <p className="text-gray-300 mb-10 leading-relaxed">
-            Tincidunt duis suspendisse euismod integer aenean. Suspendisse aliquet diam ut 
+            Tincidunt duis suspendisse euismod integer aenean. Suspendisse aliquet diam ut
             vulputate eu metus nulla facilisi. Tristique tincidunt nisi.
           </p>
 

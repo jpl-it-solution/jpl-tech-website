@@ -14,12 +14,12 @@ const teamMembers = [
   {
     name: 'Dianne Russell',
     role: 'Automation Specialist',
-     image: '/images/person.jpg' ,
+    image: '/images/person.jpg',
   },
   {
     name: 'Devon Lane',
     role: 'Sensor Integration Expert',
-     image: '/images/person.jpg',
+    image: '/images/person.jpg',
   },
   {
     name: 'Cameron Williamson',

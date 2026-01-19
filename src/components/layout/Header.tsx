@@ -367,22 +367,20 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-8">
           <Link
             href="/"
-            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
-              pathname === '/'
-                ? 'text-[#7B8CE5]'
-                : 'text-white hover:text-[#7B8CE5]'
-            }`}
+            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${pathname === '/'
+              ? 'text-[#7B8CE5]'
+              : 'text-white hover:text-[#7B8CE5]'
+              }`}
           >
             Home
           </Link>
 
           <Link
             href="/about-us"
-            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
-              pathname === '/about-us'
-                ? 'text-[#7B8CE5]'
-                : 'text-white hover:text-[#7B8CE5]'
-            }`}
+            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${pathname === '/about-us'
+              ? 'text-[#7B8CE5]'
+              : 'text-white hover:text-[#7B8CE5]'
+              }`}
           >
             About Us
           </Link>
@@ -394,20 +392,18 @@ export default function Header() {
                 <div className="flex items-center">
                   <Link
                     href="/services"
-                    className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
-                      pathname.startsWith('/services')
-                        ? 'text-[#7B8CE5]'
-                        : 'text-white hover:text-[#7B8CE5]'
-                    }`}
+                    className={`font-dm-sans text-[0.875em] font-bold transition-colors ${pathname.startsWith('/services')
+                      ? 'text-[#7B8CE5]'
+                      : 'text-white hover:text-[#7B8CE5]'
+                      }`}
                     onClick={close}
                   >
                     Services
                   </Link>
-                  <PopoverButton className={`flex items-center ml-1 font-dm-sans text-[0.875em] font-bold transition-colors ${
-                    pathname.startsWith('/services')
-                      ? 'text-[#7B8CE5]'
-                      : 'text-white hover:text-[#7B8CE5]'
-                  }`}>
+                  <PopoverButton className={`flex items-center ml-1 font-dm-sans text-[0.875em] font-bold transition-colors ${pathname.startsWith('/services')
+                    ? 'text-[#7B8CE5]'
+                    : 'text-white hover:text-[#7B8CE5]'
+                    }`}>
                     <ChevronDownIcon className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
                   </PopoverButton>
                 </div>
@@ -451,20 +447,18 @@ export default function Header() {
                 <div className="flex items-center">
                   <Link
                     href="/products"
-                    className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
-                      pathname.startsWith('/products')
-                        ? 'text-[#7B8CE5]'
-                        : 'text-white hover:text-[#7B8CE5]'
-                    }`}
+                    className={`font-dm-sans text-[0.875em] font-bold transition-colors ${pathname.startsWith('/products')
+                      ? 'text-[#7B8CE5]'
+                      : 'text-white hover:text-[#7B8CE5]'
+                      }`}
                     onClick={close}
                   >
                     Products
                   </Link>
-                  <PopoverButton className={`flex items-center ml-1 font-dm-sans text-[0.875em] font-bold transition-colors ${
-                    pathname.startsWith('/products')
-                      ? 'text-[#7B8CE5]'
-                      : 'text-white hover:text-[#7B8CE5]'
-                  }`}>
+                  <PopoverButton className={`flex items-center ml-1 font-dm-sans text-[0.875em] font-bold transition-colors ${pathname.startsWith('/products')
+                    ? 'text-[#7B8CE5]'
+                    : 'text-white hover:text-[#7B8CE5]'
+                    }`}>
                     <ChevronDownIcon className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
                   </PopoverButton>
                 </div>
@@ -503,11 +497,10 @@ export default function Header() {
 
           <Link
             href="/careers"
-            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${
-              pathname === '/careers'
-                ? 'text-[#7B8CE5]'
-                : 'text-white hover:text-[#7B8CE5]'
-            }`}
+            className={`font-dm-sans text-[0.875em] font-bold transition-colors ${pathname === '/careers'
+              ? 'text-[#7B8CE5]'
+              : 'text-white hover:text-[#7B8CE5]'
+              }`}
           >
             Career
           </Link>

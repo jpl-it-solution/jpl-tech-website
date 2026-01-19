@@ -11,12 +11,14 @@ const serviceList = [
         image: '/images/Icon-6.png',
         title: "Automation",
         description:
-             "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",    },
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",
+    },
     {
         image: '/images/Icon-5.png',
         title: "Construction",
         description:
-            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",   },
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus.",
+    },
     {
         image: '/images/Icon-4.png',
         title: "Manufacturing",
@@ -27,21 +29,23 @@ const serviceList = [
         image: '/images/Icon-3.png',
         title: "Public Safety",
         description:
-            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."},
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."
+    },
     {
         image: '/images/Icon-2.png',
         title: "Power & Utilities",
         description:
-            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."  },
+            "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."
+    },
     {
         image: '/images/Icon-1.png',
         title: "Management",
         description:
             "Augue congue turpis ut purus ut nibh sit. Et consectetur elit volutpat blandit sed facilisis. At in orci vel a vestibulum egestas. Ut faucibus."
 
-},
-    
-   
+    },
+
+
 ];
 
 type Service = {
@@ -73,7 +77,7 @@ const ServiceItem = ({ service }: { service: Service }) => (
 
         {/* footer/link pinned to bottom */}
         <div className="mt-6 text-left flex-none">
-           <a className="inline-block text-sm font-semibold uppercase tracking-wide text-indigo-400" href="#">Learn More</a>
+            <a className="inline-block text-sm font-semibold uppercase tracking-wide text-indigo-400" href="#">Learn More</a>
         </div>
     </div>
 );
@@ -127,13 +131,13 @@ const ServicesSection = () => {
                         </div>
 
                         {/* Additional content or service listings can be added here */}
-                       {/* Additional content or service listings can be added here */}
+                        {/* Additional content or service listings can be added here */}
                         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                             {serviceList.map((service, i) => (
-                           <div className="h-full px-2 mt-4" key={i}>
-                            <ServiceItem service={service} />
-                            </div>
-                              ))}
+                                <div className="h-full px-2 mt-4" key={i}>
+                                    <ServiceItem service={service} />
+                                </div>
+                            ))}
                         </div>
 
                     </div>

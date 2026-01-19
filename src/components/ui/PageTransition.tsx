@@ -13,18 +13,16 @@ export default function PageTransition({ onAnimationComplete }: PageTransitionPr
   const pathname = usePathname();
 
   useEffect(() => {
+    // Standardize path ending for comparison (optional but good for base paths)
+    const normalizedPath = pathname.endsWith('/') && pathname.length > 1 ? pathname.slice(0, -1) : pathname;
+
+    // Check if we are on home page (considering potential base path)
+    const isHome = normalizedPath === '/' || normalizedPath === '/jpl-tech-website';
+
     // Skip transition for home page
-    if (pathname === '/') {
+    if (isHome) {
       setIsLoading(false);
       setDisplayPath(pathname);
-      
-      // Ensure content is visible for home page
-      const contentWrapper = document.getElementById('content-wrapper');
-      if (contentWrapper) {
-        contentWrapper.style.display = 'block';
-        contentWrapper.style.opacity = '1';
-      }
-      
       return;
     }
 
@@ -32,28 +30,10 @@ export default function PageTransition({ onAnimationComplete }: PageTransitionPr
     setIsLoading(true);
     setDisplayPath(pathname);
 
-    // Hide content wrapper
-    const contentWrapper = document.getElementById('content-wrapper');
-    if (contentWrapper) {
-      contentWrapper.style.display = 'none';
-    }
-
     // Hide transition after animation completes
     const timer = setTimeout(() => {
       setIsLoading(false);
-      
-      // Show content wrapper after animation
-      if (contentWrapper) {
-        contentWrapper.style.display = 'block';
-        contentWrapper.style.opacity = '0';
-        contentWrapper.style.transition = 'opacity 0.3s ease-in-out';
-        
-        // Fade in content
-        setTimeout(() => {
-          contentWrapper.style.opacity = '1';
-        }, 50);
-      }
-      
+
       // Call the callback if provided
       if (onAnimationComplete) {
         onAnimationComplete();
@@ -77,7 +57,7 @@ export default function PageTransition({ onAnimationComplete }: PageTransitionPr
       '/portfolio': 'Portfolio',
       '/blog': 'Blog'
     };
-    
+
     return routes[path] || 'Loading...';
   };
 
@@ -95,7 +75,7 @@ export default function PageTransition({ onAnimationComplete }: PageTransitionPr
         {/* Geometric Logo Animation */}
         <div className="mb-8 relative">
           <div className="absolute inset-0 bg-[#7B8CE5]/20 rounded-full blur-xl animate-ping"></div>
-          
+
           {/* Main Geometric Logo */}
           <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <div className="relative w-32 h-32 mx-auto">
@@ -105,18 +85,18 @@ export default function PageTransition({ onAnimationComplete }: PageTransitionPr
                   JPL
                 </span>
               </div>
-              
+
               {/* Rotating Geometric Shapes */}
               <div className="absolute inset-0">
                 {/* Outer Square */}
                 <div className="absolute inset-2 border-2 border-[#7B8CE5]/40 rounded-lg animate-spin" style={{ animationDuration: '4s' }}></div>
-                
+
                 {/* Middle Diamond */}
                 <div className="absolute inset-4 border border-[#A6EFFB]/30 rotate-45 animate-spin" style={{ animationDuration: '3s', animationDirection: 'reverse' }}></div>
-                
+
                 {/* Inner Triangle */}
                 <div className="absolute inset-6 border border-[#7B8CE5]/50 animate-spin" style={{ animationDuration: '2s' }}></div>
-                
+
                 {/* Corner Dots */}
                 <div className="absolute top-0 left-0 w-3 h-3 bg-[#7B8CE5] rounded-full animate-ping"></div>
                 <div className="absolute top-0 right-0 w-3 h-3 bg-[#A6EFFB] rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>

@@ -53,7 +53,7 @@ const WhyChooseUsSection = () => {
             {/* Image + Content layout */}
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
               <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-                
+
                 {/* Text Section (Left) */}
                 <div className="flex-1 min-w-0 space-y-8 text-left">
                   {/* Expertise */}

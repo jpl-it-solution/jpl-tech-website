@@ -115,69 +115,69 @@ const AboutSection = () => {
                                     className="mx-auto"
                                 />
                             </div>
-                            <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
+                            <div suppressHydrationWarning className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
                                 <Image
                                     src="/images/Logo-Client-2.png"
                                     alt="Client Logo 2"
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                   
+
                                 />
                             </div>
-                            <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
+                            <div suppressHydrationWarning className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
                                 <Image
                                     src="/images/Logo-Client-3.png"
                                     alt="Client Logo 3"
                                     width={120}
                                     height={80}
                                     className="mx-auto"
-                                   
-                                   
+
+
                                 />
                             </div>
-                            <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
+                            <div suppressHydrationWarning className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
                                 <Image
                                     src="/images/Logo-Client-4.png"
                                     alt="Client Logo 4"
                                     width={120}
                                     height={80}
                                     className="mx-auto"
-                                   
-                                   
+
+
                                 />
                             </div>
-                            <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
+                            <div suppressHydrationWarning className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
                                 <Image
                                     src="/images/Logo-Client-5.png"
                                     alt="Client Logo 5"
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                   
-                                   
+
+
                                 />
                             </div>
-                            <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
+                            <div suppressHydrationWarning className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
                                 <Image
                                     src="/images/Logo-Client-6.png"
                                     alt="Client Logo 6"
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                   
-                                   
+
+
                                 />
                             </div>
-                            <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
+                            <div suppressHydrationWarning className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
                                 <Image
                                     src="/images/Logo-Client-7.png"
                                     alt="Client Logo 7"
                                     width={100}
                                     height={80}
                                     className="mx-auto"
-                                   
-                                   
+
+
                                 />
                             </div>
                             <div className="p-6 shadow-lg bg-transparent transform scale-[1.002] border border-[#1B255E] dark:border-[#1B255E] -mr-px -mb-px flex items-center justify-center min-h-[200px]">
@@ -187,8 +187,8 @@ const AboutSection = () => {
                                     width={160}
                                     height={80}
                                     className="mx-auto"
-                                   
-                                   
+
+
                                 />
                             </div>
                         </div>

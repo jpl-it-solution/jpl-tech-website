@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 import Divider from '@/components/ui/Divider';
 import {
-  CpuChipIcon,
+    CpuChipIcon,
 } from '@heroicons/react/24/outline'
 
 const FeatureSection = () => {
@@ -127,28 +127,28 @@ const FeatureSection = () => {
                         {/* Status card */}
                         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                             <div className="py-16 px-6 shadow-lg bg-[#151721] transform flex items-center flex-col justify-center min-h-[200px]"
-                               >
+                            >
                                 <h1 className="text-5xl font-bold mb-4 text-white">64K +</h1>
                                 <p className="text-gray-300">
                                     Success Projects
                                 </p>
                             </div>
-                            <div className="py-16 px-6 shadow-lg bg-[#7B8CE5] transform flex items-center flex-col justify-center min-h-[200px]"
-                               >
+                            <div suppressHydrationWarning className="py-16 px-6 shadow-lg bg-[#7B8CE5] transform flex items-center justify-center text-center border border-[#7B8CE5] dark:border-[#7B8CE5] -mr-px -mb-px relative z-10 min-h-[200px]"
+                            >
                                 <h1 className="text-5xl font-bold mb-4 text-white">54 +</h1>
                                 <p className="text-gray-300">
                                     Expert Team
                                 </p>
                             </div>
                             <div className="py-16 px-6 shadow-lg bg-[#151721] transform flex items-center flex-col justify-center min-h-[200px]"
-                               >
+                            >
                                 <h1 className="text-5xl font-bold mb-4 text-white">36K +</h1>
                                 <p className="text-gray-300">
                                     Satisfied Clients
                                 </p>
                             </div>
                             <div className="py-16 px-6 shadow-lg bg-[#151721] transform flex items-center flex-col justify-center min-h-[200px]"
-                               >
+                            >
                                 <h1 className="text-5xl font-bold mb-4 text-white">25 +</h1>
                                 <p className="text-gray-300">
                                     Awards Winning

@@ -33,7 +33,7 @@ const CloudServicesSection = () => {
 
           {/* Service Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             {/* Card 1 - Cloud Infrastructure */}
             <div className="p-6 shadow-lg border border-[#1B255E] bg-transparent rounded-xl hover:bg-[#1B255E]/30 transition-all duration-300">
               <Image
