@@ -1,137 +1,95 @@
 // components/sections/home/WhyChooseUsSection.tsx
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
-import Divider from '@/components/ui/Divider';
-import { CpuChipIcon } from "@heroicons/react/24/outline";
-import { StarIcon } from "@heroicons/react/24/outline";
+import { 
+  Users, 
+  Award, 
+  Clock, 
+  Flame, 
+  DollarSign, 
+  HelpCircle,
+  Sparkles
+} from 'lucide-react';
 
 const WhyChooseUsSection = () => {
+  const reasons = [
+    {
+      title: "Years of Industry Experience",
+      desc: "Our engineering and architectural backgrounds ensure optimal technical execution.",
+      icon: Award,
+      color: "text-indigo-400 bg-indigo-500/5"
+    },
+    {
+      title: "100+ Successful Projects",
+      desc: "Delivered scalable websites, custom SaaS systems, and complex apps globally.",
+      icon: Flame,
+      color: "text-cyan-400 bg-cyan-500/5"
+    },
+    {
+      title: "Expert Development Team",
+      desc: "Architects and senior developers utilizing state-of-the-art frameworks.",
+      icon: Users,
+      color: "text-emerald-400 bg-emerald-500/5"
+    },
+    {
+      title: "On-Time Delivery",
+      desc: "Structured milestone execution ensuring rapid and reliable deployment cycles.",
+      icon: Clock,
+      color: "text-amber-400 bg-amber-500/5"
+    },
+    {
+      title: "Affordable Pricing",
+      desc: "Flexible, cost-effective pricing packages that fit your exact business goals.",
+      icon: DollarSign,
+      color: "text-pink-400 bg-pink-500/5"
+    },
+    {
+      title: "24/7 Support",
+      desc: "Continuous technical maintenance, security patches, and server uptime support.",
+      icon: HelpCircle,
+      color: "text-rose-400 bg-rose-500/5"
+    }
+  ];
+
   return (
-    <section className="relative overflow-hidden my-16">
-      {/* Background images same as FeatureSection */}
-      <div className="absolute right-0 top-0 h-full w-full flex flex-col items-end justify-center">
-        <div>
-          <Image
-            src="/images/Ellipse-1.png"
-            alt="Background Ellipse 1"
-            width={500}
-            height={500}
-            className="w-auto h-auto max-h-[70vh] object-contain"
-            priority
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/Ellipse-4.png"
-            alt="Background Ellipse 4"
-            width={400}
-            height={400}
-            className="w-auto h-auto max-h-[70vh] object-contain"
-            priority
-          />
-        </div>
-      </div>
+    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-indigo-950/10 to-transparent">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-fuchsia-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
-        <div className="relative z-10">
-          {/* Divider */}
-          <Divider text="Why Choose Us" />
-
-          {/* Content */}
-          <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-10">
-            <div>
-              <h2 className="mb-4 text-2xl font-bold tracking-tight leading-none xs:text-2xl sm:text-4xl md:text-5xl lg:text-5xl">
-                Why Our Clients Trust Us
-              </h2>
-              <p className="mb-8 px-16 font-extralight sm:px-16 lg:px-48">
-                We deliver high-quality, AI-powered automation solutions that help industries grow faster and operate smarter.
-              </p>
-            </div>
-
-            {/* Image + Content layout */}
-            <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-              <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-                
-                {/* Text Section (Left) */}
-                <div className="flex-1 min-w-0 space-y-8 text-left">
-                  {/* Expertise */}
-                  <div className="flex gap-6 items-start">
-                    <div className="flex-shrink-0">
-                      <CpuChipIcon className="size-12 text-[#A6EFFB]" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h3 className="mb-3 text-2xl font-bold tracking-tight">
-                        Expertise in AI & Robotics
-                      </h3>
-                      <p className="text-sm leading-relaxed">
-                        We combine innovation and intelligence to deliver powerful automation solutions.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Quality */}
-                  <div className="flex gap-6 items-start">
-                    <div className="flex-shrink-0">
-                      <CpuChipIcon className="size-12 text-[#A6EFFB]" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h3 className="mb-3 text-2xl font-bold tracking-tight">
-                        High Quality Service
-                      </h3>
-                      <p className="text-sm leading-relaxed">
-                        Our expert team ensures each solution is tested, reliable, and scalable.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Client Satisfaction */}
-                  <div className="flex gap-6 items-start">
-                    <div className="flex-shrink-0">
-                      <CpuChipIcon className="size-12 text-[#A6EFFB]" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h3 className="mb-3 text-2xl font-bold tracking-tight">
-                        100% Client Satisfaction
-                      </h3>
-                      <p className="text-sm leading-relaxed">
-                        We value long-term partnerships and ensure our clients’ success comes first.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Image Section (Right) */}
-                <div className="flex-[1.5] relative w-full self-start">
-                  <Image
-                    src="/images/image.jpg"
-                    alt="why choose us"
-                    width={500}
-                    height={1} // height will scale automatically with text height
-                    className="w-full h-auto rounded-2xl shadow-lg object-cover"
-                  />
-
-                  {/* Rating card inside the image */}
-                  <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl max-w-[220px]">
-                    <div className="flex items-center gap-1 mb-1">
-                      {[...Array(5)].map((_, i) => (
-                        <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-                      ))}
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900">4.8</h3>
-                    <p className="font-semibold text-gray-800">Google Review</p>
-                    <p className="text-sm text-gray-600">
-                      Trusted by thousands of clients worldwide.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+          <span className="text-sm font-bold uppercase tracking-widest text-indigo-400 mb-3 block">
+            Our Advantage
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
+            Why Leading Innovators Partner with JPL
+          </h2>
+          <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+            We don't just build code — we build digital platforms. Here is why startups, SMEs, and global enterprises select us for engineering services.
+          </p>
         </div>
+
+        {/* Reasons Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {reasons.map((r, i) => (
+            <div key={i} className="glass-card p-8 rounded-2xl border border-white/5 flex gap-5 items-start hover:border-indigo-500/20 transition-all duration-300">
+              
+              {/* Icon Container */}
+              <div className={`p-3.5 rounded-xl shrink-0 ${r.color} border border-white/5`}>
+                <r.icon className="w-6 h-6 text-white" />
+              </div>
+              
+              <div>
+                <h4 className="text-base font-bold text-white mb-2">{r.title}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{r.desc}</p>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

@@ -1,114 +1,85 @@
+// components/sections/home/TestimonialSection.tsx
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
-import Divider from '@/components/ui/Divider';
-import { StarIcon } from '@heroicons/react/24/solid';
-
-const testimonials = [
-  {
-    name: 'Michael Lacefield',
-    role: 'Co-founder, XYZ',
-    image: '/images/person.jpg',
-    text: '“Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”',
-  },
-  {
-    name: 'Jonathan Wise',
-    role: 'Co-founder, XYZ',
-    image: '/images/person.jpg',
-    text: '“Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”',
-  },
-  {
-    name: 'Gregory Primmer',
-    role: 'Co-founder, XYZ',
-    image: '/images/person.jpg',
-    text: '“Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”',
-  },
-  {
-    name: 'Howard Esparza',
-    role: 'Co-founder, XYZ',
-    image: '/images/person.jpg',
-    text: '“Sit molestie orci a lacus. Consectetur eu accumsan aliquet nisi. Eget mauris commodo dis sed arcu integer fringilla. Egestas vitae non cum sit. Tellus nec in sapien maecenas in vel.”',
-  },
-];
+import { Quote, Star } from 'lucide-react';
 
 const TestimonialSection = () => {
+  const testimonials = [
+    {
+      quote: "Working with JPL has been a game-changer for our company. Their innovative approach and commitment to quality helped us achieve our digital transformation goals successfully.",
+      author: "Sneha Kapoor",
+      role: "Enterprise Tech Lead"
+    },
+    {
+      quote: "The team maintained clear communication, timely updates, and excellent project execution throughout the process. We highly recommend JPL for IT solutions.",
+      author: "Aman Verma",
+      role: "Operations Director"
+    },
+    {
+      quote: "Professional team, excellent delivery, and great support.",
+      author: "Maitry",
+      role: "E-Commerce Founder"
+    },
+    {
+      quote: "Highly recommended for software projects.",
+      author: "Nikhil",
+      role: "SaaS Product Owner"
+    }
+  ];
+
   return (
-    <section className="relative overflow-hidden my-16">
-      {/* Background images (same style as FeatureSection) */}
-      <div className="absolute right-0 top-0 h-full w-full flex flex-col items-end justify-center">
-        <div>
-          <Image
-            src="/images/Ellipse-1.png"
-            alt="Background Ellipse 1"
-            width={500}
-            height={500}
-            className="w-auto h-auto max-h-[70vh] object-contain"
-            priority
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/Ellipse-4.png"
-            alt="Background Ellipse 4"
-            width={400}
-            height={400}
-            className="w-auto h-auto max-h-[70vh] object-contain"
-            priority
-          />
-        </div>
-      </div>
-
-      {/* Main Container */}
+    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-transparent to-indigo-950/10">
       <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
-        {/* Divider for section heading */}
-        <Divider text="Testimonials" />
-
-        {/* Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Trusted by{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              30k+ World Class
-            </span>{' '}
-            Companies
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+          <span className="text-sm font-bold uppercase tracking-widest text-indigo-400 mb-3 block">
+            Client Success
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-4">
+            Hear From Our Partners
           </h2>
+          <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+            We measure our success by the growth of our partners. Here is what they say about Jaitrrm Private Limited (JPL).
+          </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-14 max-w-6xl mx-auto">
-          {testimonials.map((t, index) => (
-            <div
-              key={index}
-              className="bg-[#151721] p-8 rounded-xl shadow-lg border border-[#1F2230] hover:border-[#7B8CE5]/60 transition-all duration-300"
-            >
-              {/* Star Rating */}
-              <div className="flex gap-1 mb-4 text-[#00C8FF]">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-5 h-5" />
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {testimonials.map((t, i) => (
+            <div key={i} className="glass-card p-8 rounded-2xl border border-white/5 flex flex-col justify-between relative overflow-hidden group">
+              {/* Quote Background Accent */}
+              <div className="absolute right-4 top-4 text-indigo-500/10 z-0">
+                <Quote className="w-24 h-24 stroke-[1.5]" />
               </div>
 
-              {/* Testimonial Text */}
-              <p className="text-gray-300 leading-relaxed mb-8">{t.text}</p>
+              <div className="relative z-10 flex flex-col gap-4">
+                {/* Stars */}
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, idx) => (
+                    <Star key={idx} className="w-4 h-4 fill-yellow-400 stroke-yellow-400" />
+                  ))}
+                </div>
+                
+                {/* Quote Content */}
+                <p className="text-gray-300 text-base leading-relaxed italic">
+                  "{t.quote}"
+                </p>
+              </div>
 
-              {/* User Profile */}
-              <div className="flex items-center gap-4">
-                <Image
-                  src={t.image}
-                  alt={t.name}
-                  width={50}
-                  height={50}
-                  className="rounded-full border border-gray-700"
-                />
+              {/* Author Info */}
+              <div className="relative z-10 mt-8 pt-6 border-t border-white/5 flex justify-between items-center">
                 <div>
-                  <h4 className="font-semibold text-lg">{t.name}</h4>
-                  <p className="text-sm text-gray-400">{t.role}</p>
+                  <h5 className="text-white font-bold text-base">{t.author}</h5>
+                  <p className="text-indigo-400 text-xs">{t.role}</p>
                 </div>
               </div>
+
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

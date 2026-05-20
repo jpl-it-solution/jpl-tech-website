@@ -1,12 +1,14 @@
 import type { NextConfig } from "next";
 
+const isGhPages = process.env.GH_PAGES === 'true';
+
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: '/jpl-tech-website',
-  assetPrefix: '/jpl-tech-website',
+  basePath: isGhPages ? '/jpl-tech-website' : undefined,
+  assetPrefix: isGhPages ? '/jpl-tech-website' : undefined,
   typescript: {
     ignoreBuildErrors: true,
   },

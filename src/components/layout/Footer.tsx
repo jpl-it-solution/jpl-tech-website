@@ -1,3 +1,4 @@
+// components/layout/Footer.tsx
 'use client';
 
 import React from 'react';
@@ -6,111 +7,72 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative overflow-hidden bg-[#0E0F19] text-gray-300 py-20">
-      {/* Background Ellipses (same as Feature Section) */}
-      <div className="absolute right-0 top-0 h-full w-full flex flex-col items-end justify-center opacity-70">
-        <div>
-          <Image
-            src="/images/Ellipse-1.png"
-            alt="Background Ellipse 1"
-            width={500}
-            height={500}
-            className="w-auto h-auto max-h-[70vh] object-contain"
-            priority
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/Ellipse-4.png"
-            alt="Background Ellipse 4"
-            width={400}
-            height={400}
-            className="w-auto h-auto max-h-[70vh] object-contain"
-            priority
-          />
-        </div>
-      </div>
+    <footer className="relative overflow-hidden bg-[#0A0A12] text-gray-300 py-20 border-t border-white/5">
+      <div className="absolute left-1/4 bottom-0 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Container */}
       <div className="container px-6 mx-auto max-w-7xl md:px-12 lg:px-24 relative z-10">
+        
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           
           {/* Logo + Description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-2 mb-6">
               <Image
-                src="/images/logo.png"
-                alt="Robotiko Logo"
+                src="/images/logo/jpl-logo.png"
+                alt="JPL Logo"
                 width={160}
-                height={50}
+                height={55}
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Innovating intelligent automation and smart solutions for modern
-              industries.
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              Jaitrrm Private Limited (JPL) is a future-ready technology company delivering smart, scalable, and secure digital solutions. We help startups, SMEs, and enterprises transform ideas into powerful digital products.
             </p>
           </div>
 
-          {/* Company Links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-lg">Company</h4>
-            <ul className="space-y-2 text-[15px]">
-              <li><Link href="/about-us" className="hover:text-[#A6EFFB] transition">About</Link></li>
-              <li><Link href="/services" className="hover:text-[#A6EFFB] transition">Services</Link></li>
-              <li><Link href="#" className="hover:text-[#A6EFFB] transition">Features</Link></li>
-              <li><Link href="#" className="hover:text-[#A6EFFB] transition">Pricing</Link></li>
+            <h4 className="text-white font-semibold mb-4 text-base tracking-wider uppercase">Company</h4>
+            <ul className="space-y-3 text-[14px]">
+              <li><Link href="/" className="hover:text-indigo-400 transition">Home</Link></li>
+              <li><Link href="/about-us" className="hover:text-indigo-400 transition">About Us</Link></li>
+              <li><Link href="/services" className="hover:text-indigo-400 transition">Our Services</Link></li>
+              <li><Link href="/technology" className="hover:text-indigo-400 transition">Technology Stack</Link></li>
             </ul>
           </div>
 
           {/* Resources Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-lg">Resources</h4>
-            <ul className="space-y-2 text-[15px]">
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Case Studies</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Webinars</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Developer</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Documentation</a></li>
+            <h4 className="text-white font-semibold mb-4 text-base tracking-wider uppercase">Resources</h4>
+            <ul className="space-y-3 text-[14px]">
+              <li><Link href="/portfolio" className="hover:text-indigo-400 transition">Featured Portfolio</Link></li>
+              <li><Link href="/careers" className="hover:text-indigo-400 transition">Careers</Link></li>
+              <li><Link href="/contact-us" className="hover:text-indigo-400 transition">Get In Touch</Link></li>
             </ul>
           </div>
 
-          {/* Help Column */}
+          {/* Legal / Policy */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-lg">Help</h4>
-            <ul className="space-y-2 text-[15px]">
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Customer Support</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Delivery Details</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-[#A6EFFB] transition">Privacy Policy</a></li>
+            <h4 className="text-white font-semibold mb-4 text-base tracking-wider uppercase">Legal & Help</h4>
+            <ul className="space-y-3 text-[14px]">
+              <li><Link href="/terms-and-conditions" className="hover:text-indigo-400 transition">Terms & Conditions</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-indigo-400 transition">Privacy Policy</Link></li>
+              <li><Link href="/contact-us" className="hover:text-indigo-400 transition">Client Support</Link></li>
             </ul>
           </div>
 
-          {/* Newsletter Section */}
-          <div>
-            <h4 className="text-white font-semibold mb-5 text-lg">
-              Subscribe To Newsletter
-            </h4>
-            <form className="flex items-center bg-white rounded-full shadow-md max-w-md p-1">
-              <input
-                type="email"
-                placeholder="Enter Email Address"
-                className="flex-grow px-4 py-3 text-sm text-gray-700 focus:outline-none rounded-full"
-              />
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-indigo-400 to-blue-500 text-white text-sm font-semibold px-6 py-3 rounded-full hover:from-purple-400 hover:to-indigo-500 transition-all duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Bottom Divider */}
-        <div className="border-t border-[#1F2230] pt-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-400">
-          <p>Copyright © 2025 Robotiko</p>
-          <p className="mt-2 sm:mt-0">Designed by TokoTema</p>
+        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-400">
+          <p>Copyright © {new Date().getFullYear()} Jaitrrm Private Limited (JPL). All rights reserved.</p>
+          <div className="flex gap-4 mt-4 sm:mt-0">
+            <span className="hover:text-white transition">LinkedIn</span>
+            <span className="hover:text-white transition">Instagram</span>
+            <span className="hover:text-white transition">Facebook</span>
+          </div>
         </div>
       </div>
     </footer>
@@ -118,4 +80,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

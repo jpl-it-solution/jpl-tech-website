@@ -39,8 +39,7 @@ const AboutMainSection = () => {
         <div className="text-center py-12">
           <h2 className="text-4xl font-bold text-white mb-6">Who We Are</h2>
           <p className="max-w-4xl mx-auto text-lg">
-            JAITRRM Pvt. Ltd. is a global technology company providing solutions in software, automation, AI, and
-            digital transformation. We combine innovation and expertise to help businesses achieve digital excellence.
+            Jaitrrm Private Limited (JPL) is a future‑ready technology company delivering smart, scalable, and secure digital solutions. We help startups, SMEs, and enterprises transform ideas into powerful digital products.
           </p>
         </div>
 
@@ -49,16 +48,17 @@ const AboutMainSection = () => {
           <div className="bg-[#151721] p-8 rounded-2xl hover:bg-[#1B255E] transition-all duration-300 text-left">
             <h3 className="text-3xl font-semibold text-indigo-400 mb-4">Our Vision</h3>
             <p>
-              To empower industries worldwide through intelligent and sustainable technology innovations that
-              redefine the future of automation and connectivity.
+              To become a global leader in digital innovation by delivering technology solutions that empower businesses worldwide.
             </p>
           </div>
 
           <div className="bg-[#151721] p-8 rounded-2xl hover:bg-[#1B255E] transition-all duration-300 text-left">
             <h3 className="text-3xl font-semibold text-indigo-400 mb-4">Our Mission</h3>
             <p>
-              To deliver high-quality, efficient, and impactful technology solutions that enable organizations to scale,
-              innovate, and succeed in the digital era.
+              - Deliver reliable and scalable digital solutions
+- Build long‑term client relationships
+- Maintain high quality and security standards
+- Drive business growth through technology
             </p>
           </div>
         </div>
@@ -68,13 +68,13 @@ const AboutMainSection = () => {
           <h3 className="text-3xl font-semibold text-white mb-8">Core Values</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: 'Integrity', desc: 'We uphold transparency and honesty in every project.' },
-              { title: 'Innovation', desc: 'We constantly explore new ideas and creative approaches.' },
-              { title: 'Excellence', desc: 'We aim for perfection in every product we build.' },
-              { title: 'Teamwork', desc: 'Collaboration is the key to our collective success.' },
-              { title: 'Customer Focus', desc: 'Your satisfaction defines our success.' },
-              { title: 'Sustainability', desc: 'We build technology that shapes a better tomorrow.' },
-            ].map((val, i) => (
+                { title: 'Innovation', desc: 'We explore new ideas and creative approaches.' },
+                { title: 'Integrity', desc: 'Transparency and honesty in every project.' },
+                { title: 'Excellence', desc: 'Delivering high‑quality, scalable solutions.' },
+                { title: 'Customer Satisfaction', desc: 'Your success is our priority.' },
+                { title: 'Transparency', desc: 'Open communication and clear processes.' },
+                { title: 'Teamwork', desc: 'Collaboration drives collective success.' }
+              ].map((val, i) => (
               <div
                 key={i}
                 className="bg-[#151721] p-6 rounded-2xl hover:bg-[#1B255E] transition-all duration-300"
@@ -132,9 +132,9 @@ const AboutMainSection = () => {
           <h3 className="text-3xl font-semibold text-white mb-6">Our Leadership Team</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-center">
             {[
-              { name: 'Amit Kumar', role: 'CEO & Founder', image: '/images/team1.jpg' },
-              { name: 'Riya Singh', role: 'Chief Technology Officer', image: '/images/team2.jpg' },
-              { name: 'Vikram Patel', role: 'Operations Head', image: '/images/team3.jpg' },
+              { name: 'Ashaka Tiwari', role: 'Chief Executive Officer (CEO)', image: '/images/ashaka.jpg' },
+               { name: 'Abhinav', role: 'Lead Developer', image: '/images/abhinav.jpg' },
+               { name: 'Vansh', role: 'Project Manager', image: '/images/vansh.jpg' },
             ].map((member, i) => (
               <div
                 key={i}
@@ -159,9 +159,10 @@ const AboutMainSection = () => {
           <h3 className="text-3xl font-semibold text-white mb-6">Client Testimonials</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: 'Emily Watson', feedback: 'Exceptional service and technical expertise!' },
-              { name: 'David Brown', feedback: 'They transformed our business with innovative digital solutions.' },
-              { name: 'Priya Sharma', feedback: 'Professional, creative, and reliable team!' },
+              { name: 'Maitry', feedback: 'Professional team, excellent delivery, and great support.' },
+               { name: 'Sneha Kapoor', feedback: 'Working with JPL has been a game‑changer for our company. Their innovative approach and commitment to quality helped us achieve our digital transformation goals successfully.' },
+               { name: 'Aman Verma', feedback: 'The team maintained clear communication, timely updates, and excellent project execution throughout the process. We highly recommend JPL for IT solutions.' },
+               { name: 'Nikhil', feedback: 'Highly recommended for software projects.' },
             ].map((client, i) => (
               <div
                 key={i}
